@@ -1,16 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+SC:400);
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.moreInfo{
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  animation: fadeup 1.5s ease-out .2s forwards, slide-in-bck-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nameIMG {
+  margin-top: 10%;
+  width: 100%;
+  opacity: 0;
+  animation: fadeup 1.5s ease-out .2s forwards;
+  
+  
 }
 
 .App-header {
@@ -29,14 +37,20 @@
 }
 
 .var-highlight{
-  color: #C0AD60;
+  color: #bdab63;
 }
 .string-highlight{
+  color: rgba(233, 152, 105, 0.8);
+}
+.var-highlight2{
+  color: #6798d1;
+}
+.string-highlight2{
   color: rgba(253, 149, 90, 0.8);
 }
 
 #typewriter{
-    font-size: 2em;
+    font-size: 1.2vw;
     margin: 0;
     font-family: "Courier New";
 
@@ -44,6 +58,243 @@
       content: "|";
       animation: blink 500ms linear infinite alternate;
     }
+}
+h1.connect{
+  font-size: 7vw;
+  color: #464646;
+  text-shadow: 0px 5px 15px #464646;
+  animation: fadedown 3s;
+}
+
+p.connect{
+  font-size: 1vw;
+  color: #2a2a2a;
+  font-weight: 400;
+  animation: faderight 3s;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+   -webkit-transition-delay: 9999s;
+   transition-delay: 9999s;
+}
+
+.businessCard{
+  position: absolute;
+  top: 13vw;
+  right: 10%;
+  height: 20vw;
+  width: 35vw;
+  background-color: #7da393;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px #2a2a2a;
+  animation: fadeup 2s;
+}
+
+.businessCardMask{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 20vw;
+  width: 35vw;
+  background-color: #3f3f3f;
+  border-radius: 15px;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  
+}
+
+.cardName{
+  position: absolute;
+  top: 8%;
+  text-align: center;
+  font-size: 2.1vw;
+  font-weight: 700;
+  right: 5%;
+  color: #7da393;
+  background-color: #61dafb00;
+  border: none;
+}
+
+.cardName:focus {
+  outline: none;
+}
+
+.cardTitle{
+  position: absolute;
+  font-size: .8vw;
+  text-align: right;
+  top: 25%;
+  right: 48%;
+  color: #9b9b9b;
+  background-color: #61dafb00;
+  border: none;
+}
+
+.cardTitle:focus {
+  outline: none;
+}
+
+.cardCompany{
+  position: absolute;
+  font-size: .8vw;
+  top: 25%;
+  right: 7%;
+  color:#9b9b9b;
+  background-color: #61dafb00;
+  border: none;
+}
+
+.cardCompany:focus {
+  outline: none;
+}
+
+.cardEmail{
+  position: absolute;
+  font-size: 1vw;
+  width: 60%;
+  top: 47%;
+  right: 13%;
+  color: #d1d1d1;
+  background-color: #61dafb00;
+  border: none;
+}
+
+.cardEmail:focus {
+  outline: none;
+}
+
+.cardPhone{
+  position: absolute;
+  font-size: 1vw;
+  top: 67%;
+  right: 41%;
+  color: #d1d1d1;
+  background-color: #61dafb00;
+  border: none;
+}
+
+.cardPhone:focus {
+  outline: none;
+}
+
+.cardButton{
+  position: absolute;
+  padding: .4vw;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-size: .9vw;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Alegreya SC';
+  top: 91%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color:#7da393;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #2a2a2a;
+  text-shadow: 0px 3px 5px #2a2a2a;
+  border: none;
+  transition: box-shadow 0.5;
+}
+
+.cardButton:hover {
+  box-shadow: 0px 1px 5px #202020
+}
+
+.cardButton:focus {
+  box-shadow: 0px 1px 4px #181818;
+  background-color:#739486;
+  outline: none;
+}
+
+.contactFolder{
+  position: absolute;
+  background-color: tan;
+  width: 100%;
+  height: 1050px;
+  bottom: -1053px;
+  border-top: 4px groove rgb(121, 121, 121);
+  border-radius: 15px 15px 0px 0px;
+  z-index: 3;
+  animation: fadeup 2s;
+}
+
+.projectsFolder{
+  position: absolute;
+  background-color: tan;
+  width: 100%;
+  height: 1050px;
+  bottom: -1053px;
+  border-top: 4px groove rgb(121, 121, 121);
+  border-radius: 15px 15px 0px 0px;
+  z-index: 2;
+  animation: fadeup 2.5s;
+}
+
+.linksFolder{
+  position: absolute;
+  background-color: tan;
+  width: 100%;
+  height: 1050px;
+  bottom: -1053px;
+  border-top: 4px groove rgb(121, 121, 121);
+  border-radius: 15px 15px 0px 0px;
+  z-index: 1;
+  animation: fadeup 3s;
+}
+
+.contactButton{
+  position: absolute;
+  width: 10vw;
+  height: 32px;
+  background-color: tan;
+  top: -32px;
+  left: 35%;
+  font-family: 'Alegreya SC';
+  font-size: 1.4vw;
+  font-weight: 700;
+  color: #464646;
+  border: 3px groove rgb(121, 121, 121);
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  border-bottom: none;
+}
+
+.projectsButton{
+  position: absolute;
+  width: 10vw;
+  height: 32px;
+  background-color: rgb(160, 135, 102);
+  top: -32px;
+  left: 60%;
+  font-family: 'Alegreya SC';
+  font-size: 1.4vw;
+  font-weight: 700;
+  color: #464646;
+  border: 3px groove rgb(121, 121, 121);
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  border-bottom: none;
+}
+
+.linksButton{
+  position: absolute;
+  width: 10vw;
+  height: 32px;
+  background-color: rgb(134, 114, 88);
+  top: -32px;
+  left: 85%;
+  font-family: 'Alegreya SC';
+  font-size: 1.4vw;
+  font-weight: 700;
+  color: #464646;
+  border: 3px groove rgb(121, 121, 121);
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  border-bottom: none;
+}
+
+button:focus {
+  outline:0;
 }
 
 div.a {
@@ -58,10 +309,57 @@ div.c {
   text-indent: 3em;
 }
 
+div.contactText{
+  position: absolute;
+  height: 90%;
+  width: 30%;
+  left: 10%;
+}
+
+pre.code {
+  position: absolute;
+  left: 57%;
+  top: 8%;
+}
+
 pre.intro {
   position: absolute;
-  left: 900px;
-  top: 5%;
+  height: 90%;
+  width: 40%;
+  left: 8%;
+  top: 6%
+}
+
+div.connectPar {
+  position: relative;
+  height: 40%;
+  width: 75%;
+  left: 0%;
+  top: -40px;
+  padding: 2vw;
+  border: 1px ridge rgb(255, 255, 255)k;
+  background-color: rgba(251, 251, 251, 0.555);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #2a2a2a;
+  animation: fadeleft 2s;
+  
+
+}
+
+@media screen and (min-width: 1200px) {
+  .linksButton {
+     font-size: 22px;
+  }
+
+  .projectsButton {
+    font-size: 22px;
+  }
+
+  .contactButton {
+    font-size: 22px;
+  }
+
+
 }
 
 @-webkit-keyframes blink{
@@ -77,4 +375,46 @@ pre.intro {
 @keyframes blink{
   0%{opacity: 0;}
   100%{opacity: 1;}
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeup {
+  from { transform: translateY(3rem); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadedown {
+  from { transform: translateY(-3rem); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeleft {
+  from { transform: translateX(3rem); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes faderight {
+  from { transform: translateX(-3rem); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { background-color: rgba(34,34,34,1); }
+  to   { background-color: rgba(34,34,34,0); }
+}
+
+@keyframes slide-in-bck-top {
+  0% {
+          transform:translateZ(1200px) scale(3) translateY(-300px);
+          opacity:0;
+       }
+  100%   {
+          transform:translateZ(0) scale(1) translateY(0);
+          opacity:1;
+       }
+       
 }
