@@ -32,11 +32,9 @@ class contactFolder extends Component {
         <div id='contactText' className='contactText'>
           <ContactText/> 
         </div>
-        <div id='businessCard' className='businessCard'>
-          <div id='businessCardMask' className='businessCardMask'>
-            <BusinessCard/>
+          <div className='card'>
+            <BusinessCard/>  
           </div>
-        </div>
       </div>
     );
   }
