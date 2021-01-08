@@ -9,14 +9,11 @@ const ContactText = () => {
             I would love to connect with you and discuss 
             how my skills can meet your needs.<br/><br/>
             
-            Here you will find a <b>virtual business card</b>. Fill 
-            it out and, when submitted, you will receive
+            Here you will find a <b>virtual business card</b>.
+            When submitted, you will receive
             an email with my contact information, and 
             your information will be added to my virtual
-            rolodex. <br/><br/>
-
-            I look forward to connecting with you!
-            
+            rolodex.            
         </p>
       </div>
     </div>
