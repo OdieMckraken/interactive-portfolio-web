@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class BusinessCard extends Component {
+class BusinessCard extends PureComponent {
 
   constructor(){
     super()
@@ -10,18 +10,15 @@ class BusinessCard extends Component {
       cardTitle: "",
       cardEmail: "",
       cardPhone: "",
-      cardMessage: ""
+      cardMessage: "",
+      cardSent: false,
+      cardSeal: false
     }
   }
 
   flip = () => {
     const card =  document.getElementById('cardInner')
-    const cardFront = document.getElementById('cardFace cardFace--front')
-    const cardBack = document.getElementById('cardFace cardFace--back')    
-
-    card.classList.toggle('isFlipped');
-    card.classList.toggle('isFlipped');
-    card.classList.toggle('isFlipped');    
+    card.classList.toggle('isFlipped');       
   }
 
   handleFirstSubmit = (e) => {
@@ -32,11 +29,18 @@ class BusinessCard extends Component {
   handleFinalSubmit = (e) => {
     e.preventDefault()
     const cardButton = document.getElementById('cardButton')
+    setTimeout(function() { 
+      this.setState({cardSeal: true}) 
+    }.bind(this), 1000)
     cardButton.remove()
     this.flip()
-    
+    this.setState({
+      cardSent: true
+    })
     
   }
+
+    
 
   handleChange = (e) => {
     this.setState({
@@ -45,42 +49,81 @@ class BusinessCard extends Component {
   }
 
   render() {
+    let envelopeLeft = ""
+    let envelopeRight = ""
+    let envelopeBack = ""
+    let envelopeTop = ""
+    
+    if(this.state.cardSent === true){     
+        envelopeLeft = <div className='envelopeLeft'></div>
+        envelopeRight = <div className='envelopeRight'></div>
+        envelopeBack = <div className='envelopeBack'></div>
+        envelopeTop = <div id='envelopeTop' className='envelopeTop'></div>
+        
+    }
+
+    if(this.state.cardSeal === true){
+      
+      const top =  document.getElementById('envelopeTop')
+      const card = document.getElementById('card')
+      let thanks = `<div class='thanksCard'>
+        <h1>Thank you for your interest!</h1><br/>
+        <p>You should be receiving an email from me shortly with my information.</p><br/>
+        <p>I look forward to connecting with you!</p>
+      </div>`
+      setTimeout(function() {
+      top.classList.toggle('sealed')}, 2000)
+
+      setTimeout(function() {
+        card.classList.toggle('sent')}, 3000)
+
+      setTimeout(function() {
+        card.innerHTML = thanks}, 5000)
+      
+    }
+
     return (
-      <div className='cardInner' id='cardInner'>
-        <div id='cardFace cardFace--front' className='cardFace cardFace--front'>
-          <div id='businessCard' className='businessCard'>
-            <div id='businessCardMask' className='businessCardMask'>            
-              <form onSubmit={this.handleFirstSubmit}>
-                <input className='cardName' type='text' onChange={this.handleChange} placeholder='Full Name (required)' value={this.state.cardName}/>
-                <input className='cardCompany' type='text' onChange={this.handleChange} placeholder='Company Name' value={this.state.cardCompany}/>
-                <input className='cardTitle' type='text' onChange={this.handleChange} placeholder='Title'value={this.state.cardTitle}/> <p className='at'> at </p>
-                <input className='cardEmail' type='text' onChange={this.handleChange} placeholder='E-mail (required)'value={this.state.cardEmail}/>
-                <div className='envelopeIcon'>
-                  <i className="fa fa-envelope"></i>
-                </div>
-                <input className='cardPhone' type='text' onChange={this.handleChange} placeholder='Phone Number'value={this.state.cardPhone}/>
-                <div className='phoneIcon'>
-                  <i className="fa fa-phone"></i>
-                </div>              
-                <input id='cardButton' className='cardButton' type='submit'  value='Done'/>                  
-              </form>
+      <div className='envelope' id='envelope'>
+        {envelopeLeft}
+        {envelopeRight}
+        {envelopeBack}
+        {envelopeTop}
+        <div className='cardInner' id='cardInner'>
+          <div id='cardFace cardFace--front' className='cardFace cardFace--front'>
+            <div id='businessCard' className='businessCard'>
+              <div id='businessCardMask' className='businessCardMask'>            
+                <form onSubmit={this.handleFirstSubmit}>
+                  <input className='cardName' type='text' onChange={this.handleChange} placeholder='Full Name (required)' value={this.state.cardName}/>
+                  <input className='cardCompany' type='text' onChange={this.handleChange} placeholder='Company Name' value={this.state.cardCompany}/>
+                  <input className='cardTitle' type='text' onChange={this.handleChange} placeholder='Title'value={this.state.cardTitle}/> <p className='at'> at </p>
+                  <input className='cardEmail' type='text' onChange={this.handleChange} placeholder='E-mail (required)'value={this.state.cardEmail}/>
+                  <div className='envelopeIcon'>
+                    <i className="fa fa-envelope"></i>
+                  </div>
+                  <input className='cardPhone' type='text' onChange={this.handleChange} placeholder='Phone Number'value={this.state.cardPhone}/>
+                  <div className='phoneIcon'>
+                    <i className="fa fa-phone"></i>
+                  </div>              
+                  <input id='cardButton' className='cardButton' type='submit'  value='Done'/>                  
+                </form>
+              </div>
             </div>
           </div>
+          <div id='cardFace cardFace--back' className='cardFace cardFace--back'>
+            <div id='businessCardBack' className='businessCardBack'>            
+              <h1>Message</h1>
+              <form onSubmit={this.handleFinalSubmit}>
+                <textarea
+                  className='cardMessage'
+                  value={this.state.cardMessage}
+                  onChange={this.handleChange}
+                  placeholder='Leave me a message.'
+                /><br/>
+                <input type='submit' className='finalSubmit' value='Send'/>                  
+              </form>            
+            </div>
+          </div>       
         </div>
-        <div id='cardFace cardFace--back' className='cardFace cardFace--back'>
-          <div id='businessCardBack' className='businessCardBack'>            
-            <h1>Message</h1>
-            <form onSubmit={this.handleFinalSubmit}>
-              <textarea
-                className='cardMessage'
-                value={this.state.cardMessage}
-                onChange={this.handleChange}
-                placeholder='Leave me a message.'
-              /><br/>
-              <input type='submit' className='finalSubmit' value='Send'/>                  
-            </form>            
-          </div>
-        </div>       
       </div>
     );
   }
