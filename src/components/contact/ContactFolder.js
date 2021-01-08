@@ -32,7 +32,7 @@ class contactFolder extends Component {
         <div id='contactText' className='contactText'>
           <ContactText/> 
         </div>
-          <div className='card'>
+          <div id='card' className='card'>
             <BusinessCard/>  
           </div>
       </div>
