@@ -16,9 +16,7 @@
   margin-top: 10%;
   width: 100%;
   opacity: 0;
-  animation: fadeup 1.5s ease-out .2s forwards;
-  
-  
+  animation: fadeup 1.5s ease-out .2s forwards;  
 }
 
 .App-header {
@@ -87,8 +85,27 @@ input:-webkit-autofill:active {
   right: 10%;
   height: 20vw;
   width: 35vw;
-  perspective: 1000px;
-  
+  perspective: 200%;  
+}
+
+.card.sent {
+  animation: cardFadeoutUp 2s;
+}
+
+.thanksCard{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 2vw;
+  font-size: 1.2vw;
+  background-color: rgba(251, 251, 251, 0.555);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px #2a2a2a;
+  text-shadow: 0px 2px 2px #666666b2;
+  animation: fadeup 2s;
+  color: #3f3f3f;
+  position: relative;
+ 
 }
 
 .cardInner{
@@ -97,6 +114,7 @@ input:-webkit-autofill:active {
   transition: transform 1s;
   transform-style: preserve-3d;
   position: relative;
+  z-index: 10;
 }
 
 
@@ -117,16 +135,8 @@ input:-webkit-autofill:active {
   transform: rotateY(180deg);  
 }
 
-.cardFace--back.isFlipped{
-  z-index: 12;  
-}
-
 .cardFace--front {  
   transform: rotateY(0deg);  
-}
-
-.cardFace--front.isFlipped{
-  z-index: 11;
 }
 
 .businessCard{
@@ -265,6 +275,76 @@ input:-webkit-autofill:active {
   outline: none;
 }
 
+.envelope{
+  position: absolute;
+  top: -.7vw;
+  left: -1.8vw;
+  height: 110%;
+  width: 110%;
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+  perspective: 200%;
+}
+
+.envelopeLeft {
+  position: absolute;
+  background-color: #b1b1b1;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  left: -1.8vw;
+  top: -.7vw;
+  clip-path: polygon(0% 0, 10% 0, 100% 100%, 0 100%);
+  animation: envFaderight 2s;
+  z-index: 12;
+}
+
+.envelopeRight {
+  position: absolute;
+  background-color: #bebebe;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  left: -1.8vw;
+  top: -.7vw;
+  clip-path: polygon(90% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 14;
+  animation: envFadeleft 3s;
+}
+
+.envelopeBack {
+  position: absolute;
+  padding: 5%;
+  left: -1.8vw;
+  top: -.7vw;
+  background-color: #9b9b9b;
+  height: 100%;
+  width: 100%;
+  z-index: 8;
+  animation: envFadeup 1s;
+}
+
+.envelopeTop {
+  position: absolute;
+  background-color: #c0c0c0;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  left: -1.8vw;
+  top: -.7vw;
+  top: -120.8%;
+  clip-path: polygon(50% 45%, 100% 90%, 100% 100%, 0 100%, 0 90%);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform-origin: center bottom;
+  perspective: 200%;
+  z-index: 16;
+  animation: envFadeup 1s;
+}
+
+.envelopeTop.sealed{
+  transform: rotateX(-180deg)
+}
+
 .finalSubmit{
   position: absolute;
   padding: .4vw;
@@ -300,8 +380,8 @@ input:-webkit-autofill:active {
   position: absolute;
   background-color: tan;
   width: 100%;
-  height: 1050px;
-  bottom: -1053px;
+  height: 46vw;
+  bottom: -46.2vw;
   border-top: 4px groove rgb(121, 121, 121);
   border-radius: 15px 15px 0px 0px;
   z-index: 3;
@@ -312,8 +392,8 @@ input:-webkit-autofill:active {
   position: absolute;
   background-color: tan;
   width: 100%;
-  height: 1050px;
-  bottom: -1053px;
+  height: 46vw;
+  bottom: -46.2vw;
   border-top: 4px groove rgb(121, 121, 121);
   border-radius: 15px 15px 0px 0px;
   z-index: 2;
@@ -324,8 +404,8 @@ input:-webkit-autofill:active {
   position: absolute;
   background-color: tan;
   width: 100%;
-  height: 1050px;
-  bottom: -1053px;
+  height: 46vw;
+  bottom: -46.2vw;
   border-top: 4px groove rgb(121, 121, 121);
   border-radius: 15px 15px 0px 0px;
   z-index: 1;
@@ -335,9 +415,9 @@ input:-webkit-autofill:active {
 .contactButton{
   position: absolute;
   width: 10vw;
-  height: 32px;
+  height: 1.7vw;
   background-color: tan;
-  top: -32px;
+  bottom: 100%;
   left: 35%;
   font-family: 'Alegreya SC';
   font-size: 1.4vw;
@@ -351,9 +431,9 @@ input:-webkit-autofill:active {
 .projectsButton{
   position: absolute;
   width: 10vw;
-  height: 32px;
+  height: 1.7vw;
   background-color: rgb(160, 135, 102);
-  top: -32px;
+  bottom: 100%;
   left: 60%;
   font-family: 'Alegreya SC';
   font-size: 1.4vw;
@@ -367,9 +447,9 @@ input:-webkit-autofill:active {
 .linksButton{
   position: absolute;
   width: 10vw;
-  height: 32px;
+  height: 1.7vw;
   background-color: rgb(134, 114, 88);
-  top: -32px;
+  bottom: 100%;
   left: 85%;
   font-family: 'Alegreya SC';
   font-size: 1.4vw;
@@ -447,10 +527,10 @@ div.connectPar {
   left: 0%;
   top: -40px;
   padding: 2vw;
-  border: 1px ridge rgb(255, 255, 255)k;
   background-color: rgba(251, 251, 251, 0.555);
   border-radius: 10px;
   box-shadow: 0px 5px 10px #2a2a2a;
+  text-shadow: 0px 2px 2px #5555559d;
   animation: fadeleft 2s;
   
 
@@ -526,6 +606,31 @@ textarea:focus{
 @keyframes fadeout {
   from { background-color: rgba(34,34,34,1); }
   to   { background-color: rgba(34,34,34,0); }
+}
+
+@keyframes envFadeup {
+  from { transform: translateY(13rem); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes envFadedown {
+  from { transform: translateY(-13rem); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes envFadeleft {
+  from { transform: translateX(13rem); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes envFaderight {
+  from { transform: translateX(-13rem); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes cardFadeoutUp {
+  from {transform: translateX(0); opacity: 1; }
+  to   {transform: translateY(-63rem); opacity: 0;}
 }
 
 @keyframes slide-in-bck-top {
