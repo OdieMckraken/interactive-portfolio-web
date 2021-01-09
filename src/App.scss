@@ -79,13 +79,79 @@ input:-webkit-autofill:active {
    transition-delay: 9999s;
 }
 
+.projectCard{
+  position: absolute;
+  top: 6vw;
+  height: 35vw;
+  width: 20vw;
+  perspective: 1000px;
+  animation: ease-in-out proFadein 1s; 
+}
+
+.projectCard--covid{
+  left: 5%;
+}
+
+.projectCard--scratch{
+  left: 28.3%;
+  animation: ease-in-out proFadein 1.5s;
+}
+
+.projectCard--baby{
+  left: 51.6%;
+  animation: ease-in-out proFadein 2s;
+}
+
+.projectCard--katchups{
+  left: 75%;
+  animation: ease-in-out proFadein 2.5s;
+}
+
+.projectCardInner{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+ 
+  z-index: 10;
+}
+
+
+.projectCardInner:hover {
+  transform: rotateY(-180deg)
+}
+
+.projectCardFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px #2a2a2a;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+}
+
+.projectCardFace--back {  
+  background-color: #d415154f; 
+  transform: rotateY(180deg);  
+}
+
+.projectCardFace--front {
+  background-color: #310ef82d;   
+  transform: rotateY(0deg); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
 .card{
   position: absolute;
   top: 13vw;
   right: 10%;
   height: 20vw;
   width: 35vw;
-  perspective: 200%;  
+  perspective: 1000px;  
 }
 
 .card.sent {
@@ -282,7 +348,7 @@ input:-webkit-autofill:active {
   height: 110%;
   width: 110%;
   filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-  perspective: 200%;
+  perspective: 1000px;
 }
 
 .envelopeLeft {
@@ -336,7 +402,7 @@ input:-webkit-autofill:active {
   transition: transform 1s;
   transform-style: preserve-3d;
   transform-origin: center bottom;
-  perspective: 200%;
+  perspective: 1000px;
   z-index: 16;
   animation: envFadeup 1s;
 }
@@ -549,15 +615,15 @@ textarea:focus{
 
 @media screen and (min-width: 1200px) {
   .linksButton {
-     font-size: 22px;
+     font-size: 19px;
   }
 
   .projectsButton {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .contactButton {
-    font-size: 22px;
+    font-size: 19px;
   }
 
 
@@ -631,6 +697,11 @@ textarea:focus{
 @keyframes cardFadeoutUp {
   from {transform: translateX(0); opacity: 1; }
   to   {transform: translateY(-63rem); opacity: 0;}
+}
+
+@keyframes proFadein {
+  from {transform: rotateY(0deg); opacity: 0; }
+  to   {transform: rotateY(1800deg); opacity: 1; }
 }
 
 @keyframes slide-in-bck-top {
