@@ -66,6 +66,8 @@ class BusinessCard extends PureComponent {
       
       const top =  document.getElementById('envelopeTop')
       const card = document.getElementById('card')
+      const envelope = document.getElementById('envelope')
+
       let thanks = `<div class='thanksCard'>
         <h1>Thank you for your interest!</h1><br/>
         <p>You should be receiving an email from me shortly with my information.</p><br/>
@@ -78,8 +80,10 @@ class BusinessCard extends PureComponent {
         card.classList.toggle('sent')}, 3000)
 
       setTimeout(function() {
-        card.innerHTML = thanks}, 5000)
-      
+        envelope.innerHTML = thanks}, 5000)
+
+      setTimeout(function() {
+        card.classList.toggle('sent')}, 6000)      
     }
 
     return (
