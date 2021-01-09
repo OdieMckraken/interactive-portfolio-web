@@ -4,6 +4,7 @@ import Links from './links'
 class linksFolder extends Component {
 
   handleClick = () => {
+    this.props.changeLinks()
     document.getElementById('contact').style.zIndex = "10"
     document.getElementById('projects').style.zIndex = "20"
     document.getElementById('links').style.zIndex = "30"
