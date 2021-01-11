@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Links from './links'
+import FolderContent from './FolderContent'
+import { connect } from 'react-redux';
 
 class linksFolder extends Component {
 
@@ -8,18 +9,14 @@ class linksFolder extends Component {
     document.getElementById('contact').style.zIndex = "10"
     document.getElementById('projects').style.zIndex = "20"
     document.getElementById('links').style.zIndex = "30"
-
-    document.getElementById('linksButton').style.backgroundColor='tan'
-    document.getElementById('contactButton').style.backgroundColor='rgb(134, 114, 88)'
-    document.getElementById('projectsButton').style.backgroundColor='rgb(160, 135, 102)'
   }
 
   render() {
     let showContent = ""
 
-    if(this.props.showContact === true){
-      showContent = <Links/>
-    } else if(this.props.showContact === false){
+    if(this.props.showLinks === true){
+      showContent = <FolderContent/>
+    } else if(this.props.showLinks === false){
       showContent = ''
     }
 
@@ -34,4 +31,19 @@ class linksFolder extends Component {
   }
 }
 
-export default linksFolder;
+const mapDispatchToProps = dispatch => {
+  return {
+    changeLinks: () => dispatch({ type: 'OPEN_LINKS' })
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    showLinks: state.showLinks
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(linksFolder)

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FolderContent from './FolderContent';
+import { connect } from 'react-redux';
 
 class projectsFolder extends Component {
 
@@ -8,10 +9,6 @@ class projectsFolder extends Component {
     document.getElementById('contact').style.zIndex = "20"
     document.getElementById('projects').style.zIndex = "30"
     document.getElementById('links').style.zIndex = "10"
-
-    document.getElementById('projectsButton').style.backgroundColor='tan'
-    document.getElementById('contactButton').style.backgroundColor='rgb(160, 135, 102)'
-    document.getElementById('linksButton').style.backgroundColor='rgb(134, 114, 88)'
   }
 
   render() {
@@ -31,4 +28,19 @@ class projectsFolder extends Component {
   }
 }
 
-export default projectsFolder;
+const mapDispatchToProps = dispatch => {
+  return {
+    changeProjects: () => dispatch({ type: 'OPEN_PROJECTS' })
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    showProjects: state.showProjects
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(projectsFolder)

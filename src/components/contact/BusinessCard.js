@@ -27,6 +27,8 @@ class BusinessCard extends PureComponent {
   }
 
   handleFinalSubmit = (e) => {
+    const cardsURL = 'http://localhost:3000/cards'
+
     e.preventDefault()
     const cardButton = document.getElementById('cardButton')
     setTimeout(function() { 
@@ -37,6 +39,24 @@ class BusinessCard extends PureComponent {
     this.setState({
       cardSent: true
     })
+    
+    fetch(cardsURL,{
+      method:"POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({
+        name: this.state.cardName,
+        company_name: this.state.cardCompany,
+        position: this.state.cardTitle,
+        email: this.state.cardEmail,
+        phone_number: this.state.cardPhone,
+        message: this.state.cardMessage, 
+        user_id: 1     
+      })
+    })
+    .then(resp => resp.json)
+    .then(console.log)
     
   }
 

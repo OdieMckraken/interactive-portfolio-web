@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FolderContent from './FolderContent'
+import { connect } from 'react-redux';
 
 class contactFolder extends Component {
 	handleClick = () => {
@@ -7,12 +8,6 @@ class contactFolder extends Component {
 		document.getElementById("contact").style.zIndex = "30";
 		document.getElementById("projects").style.zIndex = "20";
 		document.getElementById("links").style.zIndex = "10";
-
-		document.getElementById("contactButton").style.backgroundColor = "tan";
-		document.getElementById("projectsButton").style.backgroundColor =
-			"rgb(160, 135, 102)";
-		document.getElementById("linksButton").style.backgroundColor =
-			"rgb(134, 114, 88)";
   };
   
   
@@ -38,4 +33,19 @@ class contactFolder extends Component {
 	}
 }
 
-export default contactFolder;
+const mapDispatchToProps = dispatch => {
+  return {
+    changeContact: () => dispatch({ type: 'OPEN_CONTACT' })
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    showContact: state.showContact
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(contactFolder);
