@@ -34,6 +34,8 @@ test = () => {
 			
 				if (writingTag === true) {
 					tag += HTML[cursorPosition];
+					if(i < 820){
+					i ++}
 				}
 
 				if (HTML[cursorPosition] === "<") {
@@ -58,8 +60,7 @@ test = () => {
 					else {
 						tempTypeSpeed = (Math.random() * typeSpeed) + 50;
 						
-						if(i < 164){
-						i ++}
+						
 					}
 					t.innerHTML += HTML[cursorPosition];
 				}
@@ -81,11 +82,11 @@ test = () => {
 
 				document.addEventListener("keydown", function(){
 					
-				i = 164
+				i = 820
 								
 				}, false)
 
-				if (i === 164) {
+				if (i === 820) {
 				this.setState({stopCode: true})
 				t.innerHTML = text
 				}
