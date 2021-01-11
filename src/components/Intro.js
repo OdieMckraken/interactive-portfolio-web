@@ -1,5 +1,4 @@
 import React from 'react';
-import displayIntro from './DisplayIntro';
 import Typewriter from "./Typewriter";
 
 const intro = () => { 
@@ -30,11 +29,11 @@ const intro = () => {
   ]
 }`}{`
           
-`}<span className="var-highlight">function</span>{` introduction() {
-  introCard.innerText =`}<span className="string-highlight"> 'Hi, I'm </span><span className="var-highlight2">{`$`+`{adam.firstName}`}</span><span className="string-highlight">'</span>{`
+`}<span className="var-highlight">function</span><span className='function-highlight'>{` introduction()`}</span>{` {
+introCard.innerText =`}<span className="string-highlight"> 'Hi, I'm </span><span className="var-highlight2">{`$`+`{`}</span><span className="name-highlight">{`adam`}</span><span className="punctuation-highlight">{`.`}</span><span className="var-highlight2">{`firstName}`}</span><span className="var-highlight">'</span>{`
 }
 
-introduction() `}
+`}<span className='function-highlight'>{`introduction() `}</span>
       </pre>
       <Typewriter text={document.getElementById('typewriter')}/>
     </div>     
