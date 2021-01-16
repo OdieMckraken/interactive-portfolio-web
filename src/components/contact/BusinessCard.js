@@ -27,7 +27,7 @@ class BusinessCard extends PureComponent {
   }
 
   handleFinalSubmit = (e) => {
-    const cardsURL = 'http://localhost:3000/cards'
+    const cardsURL = 'https://interactive-portfolio-api.herokuapp.com/cards'
 
     e.preventDefault()
     const cardButton = document.getElementById('cardButton')
