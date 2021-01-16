@@ -10,8 +10,8 @@ class ScratchCard extends Component {
           <div className='projectCardFace projectCardFace--back-scratch'>            
               <h1>SCRATCH</h1>
             <div className='textBox'>
-              <p> I personally have a TON of vinyl records.
-                Some of them were given to my by friends and family,
+              <p> I have a TON of vinyl records.
+                Some of them were gifted to me by my friends and family,
                 some were bought, and some have seemed to have been added to my collection by magic,
                 because I have no idea where they came from.  
               </p>
