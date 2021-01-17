@@ -129,7 +129,7 @@ class BusinessCard extends PureComponent {
                   <div className='envelopeIcon'>
                     <i className="fa fa-envelope"></i>
                   </div>
-                  <input className='cardPhone' type='text' onChange={this.handleChange} placeholder='Phone Number'value={this.state.cardPhone}/>
+                  <input className='cardPhone' type='text' onChange={this.handleChange} placeholder='Phone Number' value={this.state.cardPhone}/>
                   <div className='phoneIcon'>
                     <i className="fa fa-phone"></i>
                   </div>              
