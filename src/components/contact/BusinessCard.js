@@ -30,12 +30,17 @@ class BusinessCard extends PureComponent {
     const cardsURL = 'https://interactive-portfolio-api.herokuapp.com/cards'
 
     e.preventDefault()
+
     const cardButton = document.getElementById('cardButton')
+
     setTimeout(function() { 
       this.setState({cardSeal: true}) 
     }.bind(this), 1000)
+
     cardButton.remove()
+
     this.flip()
+
     this.setState({
       cardSent: true
     })
@@ -119,7 +124,7 @@ class BusinessCard extends PureComponent {
                 <form onSubmit={this.handleFirstSubmit}>
                   <input className='cardName' type='text' onChange={this.handleChange} placeholder='Full Name (required)' value={this.state.cardName}/>
                   <input className='cardCompany' type='text' onChange={this.handleChange} placeholder='Company Name' value={this.state.cardCompany}/>
-                  <input className='cardTitle' type='text' onChange={this.handleChange} placeholder='Title'value={this.state.cardTitle}/> <p className='at'> at </p>
+                  <input className='cardTitle' type='text' onChange={this.handleChange} placeholder='Title' value={this.state.cardTitle}/> <p className='at'> at </p>
                   <input className='cardEmail' type='text' onChange={this.handleChange} placeholder='E-mail (required)'value={this.state.cardEmail}/>
                   <div className='envelopeIcon'>
                     <i className="fa fa-envelope"></i>
