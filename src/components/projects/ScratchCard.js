@@ -12,7 +12,7 @@ class ScratchCard extends Component {
             <div className='textBox'>
               <p> I have a TON of vinyl records.
                 Some of them were gifted to me by my friends and family,
-                some were bought, and some have seemed to have been added to my collection by magic,
+                some were bought, and some seem to have been added to my collection by magic,
                 because I have no idea where they came from.  
               </p>
               <p>
