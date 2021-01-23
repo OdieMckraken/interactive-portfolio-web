@@ -774,13 +774,13 @@ textarea:focus{
   }
 }
 
-@media only screen and (max-width : 650px) {
+@media only screen and (max-width : 700px) {
   pre.intro {
     position: absolute;
-    height: 38%;
+    height: 34%;
     width: 85%;
     left: 8%;
-    top: 59%
+    top: 62%
   } 
 
   pre.code {
@@ -790,7 +790,7 @@ textarea:focus{
   }
 
   #typewriter{
-    font-size: 2.8vw;
+    font-size: 2.4vw;
     margin: 0;
     font-family: "Courier New";
 
@@ -802,8 +802,8 @@ textarea:focus{
 
   .card{
     position: absolute;
-    top: 44vw;
-    right: 16%;
+    top: 46vw;
+    right: 15%;
     height: 35vw;
     width: 70vw;
     perspective: 1000px;  
@@ -813,8 +813,8 @@ textarea:focus{
     position: absolute;
     background-color: tan;
     width: 100%;
-    height: 116vw;
-    bottom: -116.2vw;
+    height: 126vw;
+    bottom: -126.2vw;
     border-top: 4px groove rgb(121, 121, 121);
     border-radius: 15px 15px 0px 0px;
     z-index: 3;
@@ -822,7 +822,7 @@ textarea:focus{
   }
 
   h1.connect{
-    font-size: 12vw;
+    font-size: 13vw;
     font-weight: 1000;
     background-color: rgba(14, 14, 14, 0.705);
     color: transparent;
@@ -842,7 +842,7 @@ textarea:focus{
   div.connectPar {
     position: relative;
     height: 40%;
-    width: 97%;
+    width: 100%;
     left: 0%;
     top: 47vw;
     padding: 2vw;
@@ -1000,8 +1000,8 @@ textarea:focus{
     position: absolute;
     background-image: linear-gradient(to right, #141414 15%, #7efdd0 40%, #e2d884 65%, #923435 90%);
     width: 100%;
-    height: 116vw;
-    bottom: -116.2vw;
+    height: 126vw;
+    bottom: -126.2vw;
     border-top: 4px groove rgb(121, 121, 121);
     border-radius: 15px 15px 0px 0px;
     z-index: 2;
@@ -1051,7 +1051,7 @@ textarea:focus{
     background-color: #141414; 
     transform: rotateY(180deg);
     text-align: center; 
-    font-size: 1.6vw;
+    font-size: 1.65vw;
     border-top-left-radius: 15px;
     box-shadow: inset -23px -23px 33px #0a0a0a,
               inset 23px 23px 33px #1e1e1e;
@@ -1072,7 +1072,7 @@ textarea:focus{
     transform: rotateY(180deg);
     text-align: center; 
     color: #141414; 
-    font-size: 1.6vw;
+    font-size: 1.65vw;
     border-top-right-radius: 15px;
     box-shadow: inset -23px -23px 33px #39725e,
               inset 23px 23px 33px #c3ffff;
@@ -1093,7 +1093,7 @@ textarea:focus{
     transform: rotateY(180deg);
     text-align: center;  
     color: #141414;
-    font-size: 1.6vw;
+    font-size: 1.65vw;
     box-shadow: inset -23px -23px 33px #66613b,
               inset 23px 23px 33px #ffffcd;
   }
@@ -1112,7 +1112,7 @@ textarea:focus{
     transform: rotateY(180deg);
     text-align: center; 
     color: #ffffff; 
-    font-size: 1.6vw;
+    font-size: 1.65vw;
     box-shadow: inset -23px -23px 33px #421718,
               inset 23px 23px 33px #e25152;
   }
@@ -1138,8 +1138,8 @@ textarea:focus{
     position: absolute;
     background-color: #231f20;
     width: 100%;
-    height: 116vw;
-    bottom: -116.2vw;
+    height: 126vw;
+    bottom: -126.2vw;
     border-top: 4px groove rgb(121, 121, 121);
     border-radius: 15px 15px 0px 0px;
     z-index: 1;
