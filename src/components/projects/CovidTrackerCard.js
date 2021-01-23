@@ -8,7 +8,6 @@ class CovidTrackerCard extends Component {
           <div className='projectCardFace projectCardFace--front-covid' style={{ backgroundImage: "url(/covid-tracker.png)" }}>
           </div>
           <div className='projectCardFace projectCardFace--back-covid'>            
-              <h1> Covid-19 Tracker</h1><br/>
             <div className='textBox'>
               <p> Covid-19 has become a huge part of our lives.
                 It has influence over nearly all of our decisions.
@@ -31,7 +30,7 @@ class CovidTrackerCard extends Component {
                 You can check it out here 
               </p>          
             </div>
-            <a href="https://github.com/Amworkman/covid_tracker" target="_blank" rel="noreferrer"><img border="0" alt="W3Schools" src="/GitHub-Mark-Light-64px.png" width="50vw" height="50vw"/></a>
+            <a href="https://github.com/Amworkman/covid_tracker" target="_blank" rel="noreferrer"><img border="0" src="/GitHub-Mark-Light-64px.png" width="50vw" height="50vw"/></a>
           </div>
         </div>        
       </div>

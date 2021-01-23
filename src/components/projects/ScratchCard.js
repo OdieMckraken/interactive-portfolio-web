@@ -7,8 +7,7 @@ class ScratchCard extends Component {
         <div className='projectCardInner'>
           <div className='projectCardFace projectCardFace--front-scratch'  style={{ backgroundImage: "url(/scratch.png)" }}>
           </div>
-          <div className='projectCardFace projectCardFace--back-scratch'>            
-              <h1>SCRATCH</h1>
+          <div className='projectCardFace projectCardFace--back-scratch'> 
             <div className='textBox'>
               <p> I have a TON of vinyl records.
                 Some of them were gifted to me by my friends and family,
@@ -32,7 +31,7 @@ class ScratchCard extends Component {
                 create, read, update, and delete information associated with that user. 
               </p>         
             </div>
-            <a href="https://pure-lake-85624.herokuapp.com/" target="_blank" rel="noreferrer"><img border="0" alt="W3Schools" src="/scratch-logo.png" width="190vw" height="35vw"/></a>
+            <a href="https://pure-lake-85624.herokuapp.com/" target="_blank" rel="noreferrer"><img border="0" src="/scratch-logo.png" width="190vw" height="35vw"/></a>
           </div>
         </div>        
       </div>

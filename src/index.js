@@ -14,7 +14,7 @@ ReactDOM.render(
   <HttpsRedirect>
     <Provider store={store}>
       <App /> 
-    </Provider>,
+    </Provider>
   </HttpsRedirect>,
   document.getElementById('root')
 );

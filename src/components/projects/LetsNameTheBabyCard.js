@@ -8,8 +8,6 @@ class LetsNameTheBabyCard extends Component {
           <div className='projectCardFace projectCardFace--front-baby' style={{ backgroundImage: "url(/baby.png)" }}>
           </div>
           <div className='projectCardFace projectCardFace--back-baby' > 
-                    
-              <h1>Let's Name the Baby</h1>
             <div className='textBox'>
               <p> In August of 2020 I found out that I would soon be a father.
                   Over the next several months, Heather and I would be making 
@@ -30,7 +28,7 @@ class LetsNameTheBabyCard extends Component {
                 This, will be addressed in the future.
               </p>          
             </div>
-            <a href="http://letsnamethebaby.com/" target="_blank" rel="noreferrer"><img border="0" alt="W3Schools" src="/baby-logo.png" width="80vw" height="80vw"/></a>
+            <a href="http://letsnamethebaby.com/" target="_blank" rel="noreferrer"><img border="0" src="/baby-logo.png" width="70vw" height="70vw"/></a>
           </div>
         </div>        
       </div>

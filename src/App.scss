@@ -176,8 +176,7 @@ input:-webkit-autofill:active {
   height: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
-  position: relative;
- 
+  position: relative; 
   z-index: 10;
 }
 
@@ -207,7 +206,8 @@ input:-webkit-autofill:active {
 .projectCardFace--front-covid { 
   transform: rotateY(0deg); 
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
+  background-position: center; 
   font-size: .8vw; 
   box-shadow: inset -23px -23px 33px #0a0a0a,
             inset 23px 23px 33px #1e1e1e;
@@ -227,6 +227,7 @@ input:-webkit-autofill:active {
   transform: rotateY(0deg); 
   background-repeat: no-repeat;
   background-size: cover; 
+  background-position: center;
   font-size: .8vw;
   box-shadow: inset -23px -23px 33px #39725e,
             inset 23px 23px 33px #c3ffff;
@@ -246,6 +247,7 @@ input:-webkit-autofill:active {
   transform: rotateY(0deg); 
   background-repeat: no-repeat;
   background-size: cover; 
+  background-position: center;
   font-size: .8vw; 
   box-shadow: inset -23px -23px 33px #66613b,
             inset 23px 23px 33px #ffffcd;
@@ -264,7 +266,8 @@ input:-webkit-autofill:active {
 .projectCardFace--front-katchups {  
   transform: rotateY(0deg); 
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
+  background-position: center; 
   font-size: .8vw;
   box-shadow: inset -23px -23px 33px #421718,
             inset 23px 23px 33px #e25152;
@@ -694,7 +697,7 @@ button:focus {
 
 p.at{
   position: absolute;
-  top: 21%;
+  top: 22%;
   left: 56%;
   font-size: .8vw;
 }
@@ -744,8 +747,6 @@ div.connectPar {
   box-shadow: 5px 5px 15px #231f20;
   text-shadow: 0px 2px 2px #5555559d;
   animation: fadeleft 2s;
-  
-
 }
 
 textarea {
@@ -771,8 +772,458 @@ textarea:focus{
   .contactButton {
     font-size: 19px;
   }
+}
 
+@media only screen and (max-width : 650px) {
+  pre.intro {
+    position: absolute;
+    height: 38%;
+    width: 85%;
+    left: 8%;
+    top: 59%
+  } 
 
+  pre.code {
+    position: absolute;
+    left: 10%;
+    top: 3%;
+  }
+
+  #typewriter{
+    font-size: 2.8vw;
+    margin: 0;
+    font-family: "Courier New";
+
+    &:after{
+      content: "|";
+      animation: blink 500ms linear infinite alternate;
+    }
+  }
+
+  .card{
+    position: absolute;
+    top: 44vw;
+    right: 16%;
+    height: 35vw;
+    width: 70vw;
+    perspective: 1000px;  
+  }
+
+  .contactFolder{
+    position: absolute;
+    background-color: tan;
+    width: 100%;
+    height: 116vw;
+    bottom: -116.2vw;
+    border-top: 4px groove rgb(121, 121, 121);
+    border-radius: 15px 15px 0px 0px;
+    z-index: 3;
+    animation: fadeup 2s;
+  }
+
+  h1.connect{
+    font-size: 12vw;
+    font-weight: 1000;
+    background-color: rgba(14, 14, 14, 0.705);
+    color: transparent;
+    text-shadow: 4px 4px 12px #231f20;              
+    -webkit-background-clip: text;
+            background-clip: text;
+    animation: fadedown 3s;
+  }
+
+  p.connect{
+    font-size: 2vw;
+    color: #2a2a2a;
+    font-weight: 400;
+    animation: faderight 3s;
+  }
+
+  div.connectPar {
+    position: relative;
+    height: 40%;
+    width: 97%;
+    left: 0%;
+    top: 47vw;
+    padding: 2vw;
+    background-color: rgba(251, 251, 251, 0.555);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #231f20;
+    text-shadow: 0px 2px 2px #5555559d;
+    animation: fadeleft 2s;
+  }
+
+  div.contactText{
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    left: 9%;
+  }
+
+  .cardName{
+    position: absolute;
+    top: 8%;
+    text-align: center;
+    font-family: 'Alegreya SC';
+    font-size: 3.6vw;
+    font-weight: 700;
+    right: 15%;
+    color: #7da393;
+    background-color: #61dafb00;
+    border: none;
+  }
+
+  .cardTitle{
+    position: absolute;
+    font-size: 2.5vw;
+    text-align: right;
+    top: 25%;
+    right: 55%;
+    color: #9b9b9b;
+    background-color: #61dafb00;
+    border: none;
+  }
+
+  .cardCompany{
+    position: absolute;
+    font-size: 2.5vw;
+    top: 25%;
+    right: 5%;
+    color:#9b9b9b;
+    background-color: #61dafb00;
+    border: none;
+  }
+  
+  .cardEmail{
+    position: absolute;
+    font-size: 2.5vw;
+    width: 60%;
+    top: 47%;
+    left: 25%;
+    color: #d1d1d1;
+    background-color: #61dafb00;
+    border: none;
+  }
+  
+  .cardPhone{
+    position: absolute;
+    font-size: 2.5vw;
+    top: 67%;
+    left: 25%;
+    color: #d1d1d1;
+    background-color: #61dafb00;
+    border: none;
+  }
+  
+  .cardButton{
+    position: absolute;
+    padding: 1vw;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 2vw;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Alegreya SC';
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#7da393;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #2a2a2a;
+    text-shadow: 0px 3px 5px #2a2a2a;
+    border: none;
+    transition: box-shadow 0.5;
+  }
+
+  .envelopeIcon{
+    position: absolute;
+    font-size: 2.5vw;
+    top: 47%;
+    right: 77%;
+  }
+  
+  .phoneIcon{
+    position: absolute;
+    font-size: 2.5vw;
+    top: 67%;
+    right: 77%;
+  }
+
+  .finalSubmit{
+    position: absolute;
+    padding: 1vw;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 2vw;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Alegreya SC';
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#7da393;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #2a2a2a;
+    text-shadow: 0px 3px 5px #2a2a2a;
+    border: none;
+    transition: box-shadow 0.5;
+  }
+
+  p.at{
+    position: absolute;
+    top: 20%;
+    left: 48%;
+    font-size: 2.1vw;
+  }
+
+  .thanksCard{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 2vw;
+    font-size: 2.6vw;
+    background-color: rgba(251, 251, 251, 0.555);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #231f20;;
+    text-shadow: 0px 2px 2px #666666b2;
+    animation: fadeup 2s;
+    color: #3f3f3f;
+    position: relative;
+   
+  }
+
+  .projectsFolder{
+    position: absolute;
+    background-image: linear-gradient(to right, #141414 15%, #7efdd0 40%, #e2d884 65%, #923435 90%);
+    width: 100%;
+    height: 116vw;
+    bottom: -116.2vw;
+    border-top: 4px groove rgb(121, 121, 121);
+    border-radius: 15px 15px 0px 0px;
+    z-index: 2;
+    animation: fadeup 2.5s;
+  }  
+
+  .projectCard{
+    position: absolute;
+    top: 6vw;
+    height: 50%;
+    width: 50%;
+    perspective: 1000px;
+    animation: ease-in-out proFadein 1s; 
+  }
+  
+  .projectCard--covid{
+    top: 0%;
+    left: 0%;
+  }
+  
+  .projectCard--scratch{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    animation: ease-in-out proFadein 1.3s;
+  }
+  
+  .projectCard--baby{
+    top: 50%;
+    left: 0%;
+    animation: ease-in-out proFadein 1.6s;
+  }
+  
+  .projectCard--katchups{
+    top: 50%;
+    left: 50%;
+    animation: ease-in-out proFadein 1.9s;
+  }
+
+  .projectCardFace {
+    border-radius: 0px;  
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;  
+  }
+
+  .projectCardFace--back-covid {  
+    background-color: #141414; 
+    transform: rotateY(180deg);
+    text-align: center; 
+    font-size: 1.6vw;
+    border-top-left-radius: 15px;
+    box-shadow: inset -23px -23px 33px #0a0a0a,
+              inset 23px 23px 33px #1e1e1e;
+  }
+  
+  .projectCardFace--front-covid { 
+    transform: rotateY(0deg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-size: .8vw; 
+    border-top-left-radius: 15px;
+    box-shadow: inset -23px -23px 33px #0a0a0a,
+              inset 23px 23px 33px #1e1e1e;
+  }
+  
+  .projectCardFace--back-scratch {  
+    background-color: #7efdd0; 
+    transform: rotateY(180deg);
+    text-align: center; 
+    color: #141414; 
+    font-size: 1.6vw;
+    border-top-right-radius: 15px;
+    box-shadow: inset -23px -23px 33px #39725e,
+              inset 23px 23px 33px #c3ffff;
+  }
+  
+  .projectCardFace--front-scratch {  
+    transform: rotateY(0deg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    border-top-right-radius: 15px;
+    font-size: .8vw;
+    box-shadow: inset -23px -23px 33px #39725e,
+              inset 23px 23px 33px #c3ffff;
+  }
+  
+  .projectCardFace--back-baby {  
+    background-color: #e2d884; 
+    transform: rotateY(180deg);
+    text-align: center;  
+    color: #141414;
+    font-size: 1.6vw;
+    box-shadow: inset -23px -23px 33px #66613b,
+              inset 23px 23px 33px #ffffcd;
+  }
+  
+  .projectCardFace--front-baby { 
+    transform: rotateY(0deg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-size: .8vw; 
+    box-shadow: inset -23px -23px 33px #66613b,
+              inset 23px 23px 33px #ffffcd;
+  }
+  
+  .projectCardFace--back-katchups {  
+    background-color: #923435; 
+    transform: rotateY(180deg);
+    text-align: center; 
+    color: #ffffff; 
+    font-size: 1.6vw;
+    box-shadow: inset -23px -23px 33px #421718,
+              inset 23px 23px 33px #e25152;
+  }
+  
+  .projectCardFace--front-katchups {  
+    transform: rotateY(0deg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-size: .8vw;
+    box-shadow: inset -23px -23px 33px #421718,
+              inset 23px 23px 33px #e25152;
+  }
+  
+  .projectCardFace--front {
+    background-color: #310ef82d;   
+    transform: rotateY(0deg); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-size: .8vw;
+  }
+
+  .linksFolder{
+    position: absolute;
+    background-color: #231f20;
+    width: 100%;
+    height: 116vw;
+    bottom: -116.2vw;
+    border-top: 4px groove rgb(121, 121, 121);
+    border-radius: 15px 15px 0px 0px;
+    z-index: 1;
+    animation: fadeup 3s;
+  }
+
+  .linkLogo--linkedin{
+    background-color: #ffffff00;
+    left: 60%;
+    top: 37%;
+    animation-delay: .5s;
+  }
+  
+  .linkLogo--github{
+    background-color: #ffffff00; 
+    left: 10%;  
+  }
+  
+  .linkLogo--medium{
+    background-color: #ffffff00;
+    left: 10%;
+    top: 65%;
+    animation-delay: 1s
+  }
+
+  .linkLogo{
+    background-color: #ffffff00;
+    width: 28vw;
+    height: 28vw;
+    position: absolute;
+    margin: 0 auto;
+    border-radius: 30%;
+    border: solid 1.3vw rgba(255, 255, 255, 0);
+    
+  }
+
+  .contactButton{
+    position: absolute;
+    width: 15vw;
+    height: 3.7vw;
+    background-color: tan;
+    bottom: 99.9%;
+    left: 35%;
+    font-family: 'Alegreya SC';
+    font-size: 2vw;
+    font-weight: 700;
+    color: #464646;
+    border: 3px groove rgb(121, 121, 121);
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+    border-bottom: none;
+  }
+  
+  .projectsButton{
+    position: absolute;
+    width: 15vw;
+    height: 3.7vw;
+    background-image: linear-gradient(to right,#7efdd0 -300%, #e2d884 65%, #923435 190%);
+    bottom: 99.9%;
+    left: 58%;
+    font-family: 'Alegreya SC';
+    font-size: 2vw;
+    font-weight: 700;
+    color: #464646;
+    border: 3px groove rgb(121, 121, 121);
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+    border-bottom: none;
+  }
+  
+  .linksButton{
+    position: absolute;
+    width: 15vw;
+    height: 3.7vw;
+    background-color: #231f20;
+    bottom: 99.9%;
+    left: 80%;
+    font-family: 'Alegreya SC';
+    font-size: 2vw;
+    font-weight: 700;
+    color: #a1a1a1;
+    border: 3px groove rgb(121, 121, 121);
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+    border-bottom: none;
+  }
+  
 }
 
 @-webkit-keyframes blink{

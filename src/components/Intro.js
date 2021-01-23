@@ -4,8 +4,8 @@ import Typewriter from "./Typewriter";
 const intro = () => { 
   return ( 
     <div> 
-      <pre className='code' id="typewriter">{`
-`}<span className="var-highlight">{`let`}</span>{` adam = {
+      <pre className='code' id="typewriter">{``
+}<span className="var-highlight">{`let`}</span>{` adam = {
   firstName:`}<span className="string-highlight">'Adam'</span>{`,
   lastName: `}<span className="string-highlight">'Workman'</span>{`,
   location: `}<span className="string-highlight">'Ellijay Georgia'</span>{`,

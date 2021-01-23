@@ -8,7 +8,6 @@ class KatchupsCard extends Component {
           <div className='projectCardFace projectCardFace--front-katchups' style={{ backgroundImage: "url(/katchups.png)" }}>
           </div>
           <div className='projectCardFace projectCardFace--back-katchups' >            
-              <h1>katchups</h1><br/>
             <div className='textBox'>
               <p> Do you and (enter name of friends or significant other)
                 ever have a hard time agreeing on what to eat? Do you wish that
@@ -30,7 +29,7 @@ class KatchupsCard extends Component {
               </p>
             </div> 
                        
-              <a href="https://amworkman.github.io/katchups-front/" target="_blank" rel="noreferrer"><img border="0" alt="W3Schools" src="/katchups-logo.png" width="200vw" height="55vw"/></a>            
+              <a href="https://amworkman.github.io/katchups-front/" target="_blank" rel="noreferrer"><img border="0" src="/katchups-logo.png" width="200vw" height="55vw"/></a>            
           </div>
         </div>        
       </div>
