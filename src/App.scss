@@ -774,7 +774,7 @@ textarea:focus{
   }
 }
 
-@media only screen and (max-width : 700px) {
+@media only screen and (max-width : 800px) {
   pre.intro {
     position: absolute;
     height: 34%;
@@ -802,7 +802,7 @@ textarea:focus{
 
   .card{
     position: absolute;
-    top: 46vw;
+    top: 54vw;
     right: 15%;
     height: 35vw;
     width: 70vw;
@@ -822,7 +822,7 @@ textarea:focus{
   }
 
   h1.connect{
-    font-size: 13vw;
+    font-size: 15vw;
     font-weight: 1000;
     background-color: rgba(14, 14, 14, 0.705);
     color: transparent;
