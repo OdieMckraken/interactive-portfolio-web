@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 class ScratchCard extends Component {
+  handleClick = () => {
+    window.open('https://pure-lake-85624.herokuapp.com/')
+  }
   render() {
     return (
       <div className='projectCard projectCard--scratch'>
@@ -29,9 +32,11 @@ class ScratchCard extends Component {
                 This program was built with Sinatra. It features user authentication,
                 the use of an external API, and a database where the user can 
                 create, read, update, and delete information associated with that user. 
-              </p>         
+              </p> 
+              <p>
+                Click to check it out! 
+              </p>        
             </div>
-            <a href="https://pure-lake-85624.herokuapp.com/" target="_blank" rel="noreferrer"><img border="0" src="/scratch-logo.png" width="190vw" height="35vw"/></a>
           </div>
         </div>        
       </div>
