@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
 class CovidTrackerCard extends Component {
+
+  handleClick = () => {
+    window.open('https://github.com/Amworkman/covid_tracker')
+  }
   render() {
     return (
       <div className='projectCard projectCard--covid'>
         <div className='projectCardInner'>
           <div className='projectCardFace projectCardFace--front-covid' style={{ backgroundImage: "url(/covid-tracker.png)" }}>
           </div>
-          <div className='projectCardFace projectCardFace--back-covid'>            
+          <div className='projectCardFace projectCardFace--back-covid' onClick={this.handleClick}>            
             <div className='textBox'>
               <p> Covid-19 has become a huge part of our lives.
                 It has influence over nearly all of our decisions.
@@ -27,10 +31,9 @@ class CovidTrackerCard extends Component {
                 It is simple and functional.
               </p>
               <p>
-                You can check it out here 
+                Click to check it out! 
               </p>          
             </div>
-            <a href="https://github.com/Amworkman/covid_tracker" target="_blank" rel="noreferrer"><img border="0" src="/GitHub-Mark-Light-64px.png" width="50vw" height="50vw"/></a>
           </div>
         </div>        
       </div>
