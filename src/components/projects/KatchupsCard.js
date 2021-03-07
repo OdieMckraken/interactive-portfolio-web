@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
 class KatchupsCard extends Component {
+  handleClick = () => {
+    window.open('https://amworkman.github.io/katchups-front/')
+  }  
   render() {
     return (
       <div className='projectCard projectCard--katchups' >
         <div className='projectCardInner' >
           <div className='projectCardFace projectCardFace--front-katchups' style={{ backgroundImage: "url(/katchups.png)" }}>
           </div>
-          <div className='projectCardFace projectCardFace--back-katchups' >            
+          <div className='projectCardFace projectCardFace--back-katchups' onClick={this.handleClick} >            
             <div className='textBox'>
               <p> Do you and (enter name of friends or significant other)
                 ever have a hard time agreeing on what to eat? Do you wish that
@@ -27,9 +30,10 @@ class KatchupsCard extends Component {
                 frontend. It is currently undergoing a large refactor and not all of the
                 features will be functional.
               </p>
-            </div> 
-                       
-              <a href="https://amworkman.github.io/katchups-front/" target="_blank" rel="noreferrer"><img border="0" src="/katchups-logo.png" width="200vw" height="55vw"/></a>            
+              <p>
+                Click to check it out! 
+              </p>
+            </div>
           </div>
         </div>        
       </div>
