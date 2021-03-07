@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 class LetsNameTheBabyCard extends Component {
+  handleClick = () => {
+    window.open('http://letsnamethebaby.com/')
+  } 
   render() {
     return (
       <div className='projectCard projectCard--baby'>
@@ -26,9 +29,11 @@ class LetsNameTheBabyCard extends Component {
               <p>
                 This app uses a large database and may take some time to load.
                 This, will be addressed in the future.
+              </p>
+              <p>
+                Click to check it out! 
               </p>          
             </div>
-            <a href="http://letsnamethebaby.com/" target="_blank" rel="noreferrer"><img border="0" src="/baby-logo.png" width="70vw" height="70vw"/></a>
           </div>
         </div>        
       </div>
