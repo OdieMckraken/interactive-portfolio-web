@@ -10,7 +10,7 @@ class LetsNameTheBabyCard extends Component {
         <div className='projectCardInner'>
           <div className='projectCardFace projectCardFace--front-baby' style={{ backgroundImage: "url(/baby.png)" }}>
           </div>
-          <div className='projectCardFace projectCardFace--back-baby' > 
+          <div className='projectCardFace projectCardFace--back-baby' onClick={this.handleClick} > 
             <div className='textBox'>
               <p> In August of 2020 I found out that I would soon be a father.
                   Over the next several months, Heather and I would be making 
