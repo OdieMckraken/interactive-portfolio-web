@@ -10,7 +10,7 @@ class ScratchCard extends Component {
         <div className='projectCardInner'>
           <div className='projectCardFace projectCardFace--front-scratch'  style={{ backgroundImage: "url(/scratch.png)" }}>
           </div>
-          <div className='projectCardFace projectCardFace--back-scratch'> 
+          <div className='projectCardFace projectCardFace--back-scratch' onClick={this.handleClick}> 
             <div className='textBox'>
               <p> I have a TON of vinyl records.
                 Some of them were gifted to me by my friends and family,
