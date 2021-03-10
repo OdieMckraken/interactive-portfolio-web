@@ -24,7 +24,7 @@ class CovidTrackerCard extends Component {
                 with the highest number of confirmed cases, or the highest number of new cases.
                 You can see a list of all the countries that have no new cases.
                 You can get the stats of a random country, or search for the country 
-                You are most interested in. There is even a hidden surprise!
+                you are most interested in. There is even a hidden surprise!
               </p>
               <p>
                 This was the fist program that I built with ruby.
