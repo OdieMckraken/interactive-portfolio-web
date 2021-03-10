@@ -22,8 +22,8 @@ class LetsNameTheBabyCard extends Component {
                 password. From there you enter your names, choose your roles,
                 and click the button that corresponds to the gender of your baby...
                 if you don't know the gender, thats alright, there is a "baby" button 
-                that will give you access to both the male and female names.You each get 
-                to choose up to 10 of your favorite names, and, when you're ready,
+                that will give you access to both the male and female names. You each get 
+                to choose up to 10 of your favorite names, and when you're ready,
                 the app will show you your matching names!
               </p>
               <p>
