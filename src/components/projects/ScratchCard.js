@@ -14,8 +14,7 @@ class ScratchCard extends Component {
             <div className='textBox'>
               <p> I have a TON of vinyl records.
                 Some of them were gifted to me by my friends and family,
-                some were bought, and some seem to have been added to my collection by magic,
-                because I have no idea where they came from.  
+                some were bought, and some seem to have been added to my collection by magic.  
               </p>
               <p>
                 I have always wondered the worth of my record collection...
