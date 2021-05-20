@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
 class LetsNameTheBabyCard extends Component {
-  handleClick = () => {
-    window.open('http://letsnamethebaby.com/')
+  handleBackClick = () => {
+    window.open('http://letsnamethebaby.com/')  } 
+
+  handleFrontClick = () => {
+    document.getElementById("babyCardInner").classList.toggle("projectCardInner-selected");
   } 
   render() {
     return (
       <div className='projectCard projectCard--baby'>
-        <div className='projectCardInner'>
-          <div className='projectCardFace projectCardFace--front-baby' style={{ backgroundImage: "url(/baby.png)" }}>
+        <div id="babyCardInner" className='projectCardInner'>
+          <div className='projectCardFace projectCardFace--front-baby' style={{ backgroundImage: "url(/baby.png)" }} onClick={this.handleFrontClick}>
           </div>
-          <div className='projectCardFace projectCardFace--back-baby' onClick={this.handleClick} > 
+          <div className='projectCardFace projectCardFace--back-baby' onClick={this.handleBackClick} > 
             <div className='textBox'>
               <p> In August of 2020 I found out that I would soon be a father.
                   Over the next several months, Heather and I would be making 
