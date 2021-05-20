@@ -9,7 +9,7 @@
   position: absolute;
   left: 1%;
   bottom: 1%;
-  animation: fadeup 1.5s ease-out .2s forwards, slide-in-bck-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+  animation: ease-out .2s forwards, slide-in-bck-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
   opacity: 0;
 }
 
@@ -741,7 +741,7 @@ pre.intro {
   height: 90%;
   width: 40%;
   left: 8%;
-  top: 6%
+  top: 6%;
 }
 
 div.connectPar {
