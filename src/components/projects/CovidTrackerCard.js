@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 
 class CovidTrackerCard extends Component {
 
-  handleClick = () => {
+  handleBackClick = () => {
     window.open('https://github.com/Amworkman/covid_tracker')
+  }
+  handleFrontClick = () => {
+    document.getElementById("covidCardInner").classList.toggle("projectCardInner-selected");
   }
   render() {
     return (
       <div className='projectCard projectCard--covid'>
-        <div className='projectCardInner'>
-          <div className='projectCardFace projectCardFace--front-covid' style={{ backgroundImage: "url(/covid-tracker.png)" }}>
+        <div id="covidCardInner" className='projectCardInner'>
+          <div className='projectCardFace projectCardFace--front-covid' style={{ backgroundImage: "url(/covid-tracker.png)" }} onClick={this.handleFrontClick}>
           </div>
-          <div className='projectCardFace projectCardFace--back-covid' onClick={this.handleClick}>            
+          <div className='projectCardFace projectCardFace--back-covid' onClick={this.handleBackClick}>            
             <div className='textBox'>
               <p> Covid-19 has become a huge part of our lives.
                 It has influence over nearly all of our decisions.
