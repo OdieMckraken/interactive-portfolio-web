@@ -6,7 +6,8 @@ class Typewriter extends PureComponent {
 	constructor(){
 		super()
 		this.state = {
-			stopCode: false
+			stopCode: false,
+			skipText: "Click to skip"
 		}
 	}
 
@@ -87,8 +88,9 @@ test = () => {
 				}, false)
 
 				if (i === 820) {
-				this.setState({stopCode: true})
-				t.innerHTML = text
+					this.setState({skipText: ""})
+					this.setState({stopCode: true})
+					t.innerHTML = text
 				}
 			
 			}
@@ -111,6 +113,7 @@ test = () => {
 		return (
 		<>
 			<div>
+				<div className="skipText">{this.state.skipText}</div>
 				<DisplayIntro test={this.test()} stopCode={this.state.stopCode}/>
 			</div>
 			</>
