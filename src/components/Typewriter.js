@@ -80,7 +80,7 @@ test = () => {
 					setTimeout(type, tempTypeSpeed);
 				}
 
-				document.addEventListener("keydown", function(){
+				document.addEventListener("click", function(){
 					
 				i = 820
 								
