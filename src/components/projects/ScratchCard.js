@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
 class ScratchCard extends Component {
-  handleClick = () => {
+  handleBackClick = () => {
     window.open('https://pure-lake-85624.herokuapp.com/')
+  }
+  handleFrontClick = () => {
+    document.getElementById("scratchCardInner").classList.toggle("projectCardInner-selected");
   }
   render() {
     return (
       <div className='projectCard projectCard--scratch'>
-        <div className='projectCardInner'>
-          <div className='projectCardFace projectCardFace--front-scratch'  style={{ backgroundImage: "url(/scratch.png)" }}>
+        <div id="scratchCardInner" className='projectCardInner'>
+          <div className='projectCardFace projectCardFace--front-scratch'  style={{ backgroundImage: "url(/scratch.png)" }} onClick={this.handleFrontClick}>
           </div>
-          <div className='projectCardFace projectCardFace--back-scratch' onClick={this.handleClick}> 
+          <div className='projectCardFace projectCardFace--back-scratch' onClick={this.handleBackClick}> 
             <div className='textBox'>
               <p> I have a TON of vinyl records.
                 Some of them were gifted to me by my friends and family,
