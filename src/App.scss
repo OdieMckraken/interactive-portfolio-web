@@ -80,6 +80,7 @@ h1.connect{
   font-weight: 1000;
   background-color: rgba(14, 14, 14, 0.705);
   color: transparent;
+  height: auto;
   text-shadow: 4px 4px 12px #231f20;              
   -webkit-background-clip: text;
           background-clip: text;
@@ -820,7 +821,11 @@ textarea:focus{
     border-top: 4px groove rgb(121, 121, 121);
     border-radius: 15px 15px 0px 0px;
     z-index: 3;
-    animation: fadeup 2s;
+    animation: fadeup 2s;    
+  }
+
+  h1.connect{
+    font-size: 15vw;
   }
 
   p.connect{
