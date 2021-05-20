@@ -7,7 +7,7 @@ const ContactText = () => {
       <div className='connectPar'>
         <p className='connect'>
             Please fill out this <b>virtual business card</b>.
-            Once submitted, you will be added to my virtual rolodex,
+            Once submitted, you will be added to my virtual rolodex
             and I will be in contact to discuss how my skills can meet 
             your needs.
         </p>
