@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
 class KatchupsCard extends Component {
-  handleClick = () => {
+  handleBackClick = () => {
     window.open('https://youtu.be/_KOrnDga8-k')
   }  
+  handleFrontClick = () => {
+    document.getElementById("katchupsCardInner").classList.toggle("projectCardInner-selected");
+  }
   render() {
     return (
       <div className='projectCard projectCard--katchups' >
-        <div className='projectCardInner' >
-          <div className='projectCardFace projectCardFace--front-katchups' style={{ backgroundImage: "url(/katchups.png)" }}>
+        <div id="katchupsCardInner" className='projectCardInner' >
+          <div className='projectCardFace projectCardFace--front-katchups' style={{ backgroundImage: "url(/katchups.png)" }} onClick={this.handleFrontClick}>
           </div>
-          <div className='projectCardFace projectCardFace--back-katchups' onClick={this.handleClick} >            
+          <div className='projectCardFace projectCardFace--back-katchups' onClick={this.handleBackClick} >            
             <div className='textBox'>
               <p> Do you and (enter name of friends or significant other)
                 ever have a hard time agreeing on what to eat? Do you wish that
